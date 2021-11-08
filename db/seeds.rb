@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+data_structure = Category.create(name: "Data Structure")
+
+front_end = Category.create(name: "Computer Science")
+
+data_structure.questions.create(Api.data_structure)
+
+front_end.questions.create(Api.computer_science)
