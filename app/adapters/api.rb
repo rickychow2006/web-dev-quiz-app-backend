@@ -6,4 +6,10 @@ class Api
         @@data = JSON.parse(response.body)
     end 
 
+    def self.computer_science
+        url = URI.parse("https://cs-quiz-api.herokuapp.com/computer_science")
+        response = Net::HTTP.get_response(url)
+        @@data = JSON.parse(response.body)
+    end 
+    
 end 
