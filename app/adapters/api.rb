@@ -11,5 +11,11 @@ class Api
         response = Net::HTTP.get_response(url)
         @@data = JSON.parse(response.body)
     end 
-    
+
+    def self.javascript
+        url = URI.parse("https://cs-quiz-api.herokuapp.com/java_script")
+        response = Net::HTTP.get_response(url)
+        @@data = JSON.parse(response.body)
+    end 
+
 end 
