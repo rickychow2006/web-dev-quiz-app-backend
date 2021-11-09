@@ -18,4 +18,10 @@ class Api
         @@data = JSON.parse(response.body)
     end 
 
+    def self.modern_react
+        url = URI.parse("https://cs-quiz-api.herokuapp.com/modern_react")
+        response = Net::HTTP.get_response(url)
+        @@data = JSON.parse(response.body)
+    end 
+
 end 
