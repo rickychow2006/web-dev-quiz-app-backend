@@ -22,12 +22,6 @@ ActiveRecord::Schema.define(version: 2021_11_04_211040) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
     t.text "question"
     t.string "choice1"
     t.string "choice2"
@@ -35,6 +29,16 @@ ActiveRecord::Schema.define(version: 2021_11_04_211040) do
     t.string "choice4"
     t.string "answer"
     t.integer "category_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.text "name"
+    t.integer "data_structure_score", default: 0
+    t.integer "computer_science_score", default: 0
+    t.integer "javascript_score", default: 0
+    t.integer "modern_react_score", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
