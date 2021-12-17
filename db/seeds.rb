@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Category.destroy_all
+Question.destroy_all
+
 data_structure = Category.create(name: "Data Structure")
 
 front_end = Category.create(name: "Computer Science")
@@ -13,11 +17,3 @@ front_end = Category.create(name: "Computer Science")
 javascript = Category.create(name: "JavaScript")
 
 modern_react = Category.create(name: "Modern React")
-
-data_structure.questions.create(Api.data_structure)
-
-front_end.questions.create(Api.computer_science)
-
-javascript.questions.create(Api.javascript)
-
-modern_react.questions.create(Api.modern_react)
